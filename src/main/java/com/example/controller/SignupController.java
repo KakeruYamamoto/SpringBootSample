@@ -19,7 +19,7 @@ public class SignupController {
 	private UserApplicationService userApplicationService;
 
 	/** ユーザー登録画面を表示 */
-	@GetMapping("/singup")
+	@GetMapping("/signup")
 	public String getSignup(Model model) {
 		//性別を取得
 		Map<String, Integer> genderMap = userApplicationService.getGenderMap();
