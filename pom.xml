@@ -55,7 +55,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!--  以下、追加箇所（２０２２/10/18）   -->
+		<!--  以下、追加箇所（２０２２/10/18） -->
 		<!--jquery-->
 		<dependency>
 			<groupId>org.webjars</groupId>
