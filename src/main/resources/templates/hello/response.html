@@ -7,6 +7,11 @@
 <body>
 	<h1>HelloResponse</h1>
 	<!-- 受け取った文字を表示する -->
+	<!-- memo:　Thymleafを使用するにはth：属性を使用すること
+	ｔｈ属性に＄｛キー｝を使用することでModelクラスに登録された値を使用することができる。
+	今回は、このresponse.htmlに来る前に以下のように登録されている
+	コントローラクラスにて、moedel.addAttribute("sample", str);
+	 -->
 	<p th:text="${sample}"></p>
 </body>
 </html>
