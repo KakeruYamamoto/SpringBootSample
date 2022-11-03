@@ -55,6 +55,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!--  以下、追加箇所（２０２２/11/03） -->
+		<!-- Validator -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
 		<!--  以下、追加箇所（２０２２/10/18） -->
 		<!--jquery-->
 		<dependency>

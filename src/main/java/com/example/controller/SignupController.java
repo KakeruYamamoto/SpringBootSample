@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -41,11 +42,13 @@ public class SignupController {
 
 	/** ユーザー登録処理 
 	 * ’@ModelAttributeをつけると、自動でModelにインスタンスを登録してくれる
-	 * 
+	 * 2022/11/03：以下引数に追加
+	 * `@Validated：このアノテーションを使用すると、バリデーションが実行される
 	 * 
 	 * */
 	@PostMapping("/signup")
-	public String postSignup(Model model, Locale locale, @ModelAttribute SignupForm form, BindingResult bindingResult) {
+	public String postSignup(Model model, Locale locale, @ModelAttribute @Validated SignupForm form,
+			BindingResult bindingResult) {
 
 		//入力チェック結果
 		// BindingResult：バインドエラーやバリデーションエラーが発生しているかhasErrors()メソッドで確認することができる
