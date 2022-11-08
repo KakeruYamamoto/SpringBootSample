@@ -55,6 +55,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!--  以下、追加箇所（２０２２/11/07） -->
+		<!-- thymeleaf-layout-dialect -->
+		<dependency>
+			<groupId>nz.net.ultraq.thymeleaf</groupId>
+			<artifactId>thymeleaf-layout-dialect</artifactId>
+		</dependency>
+		
 		<!--  以下、追加箇所（２０２２/11/03） -->
 		<!-- Validator -->
 		<dependency>
