@@ -10,4 +10,8 @@ public class SpringBootSampleApplication {
 		SpringApplication.run(SpringBootSampleApplication.class, args);
 	}
 
+	//	@Bean
+	//	public ModelMapper modelMapper() {
+	//		return new ModelMapper();
+	//	}
 }
