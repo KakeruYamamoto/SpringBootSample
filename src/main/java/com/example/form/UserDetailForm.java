@@ -2,8 +2,15 @@ package com.example.form;
 
 import java.util.Date;
 
+import com.example.domain.user.model.Department;
+
 import lombok.Data;
 
+/**
+ * ユーザー詳細画面のフォームクラス
+ * 
+ *
+ */
 @Data
 public class UserDetailForm {
 
@@ -13,5 +20,5 @@ public class UserDetailForm {
 	private Date birthday;
 	private Integer age;
 	private Integer gender;
-
+	private Department department;
 }

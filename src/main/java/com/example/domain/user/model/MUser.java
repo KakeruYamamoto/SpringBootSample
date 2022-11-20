@@ -4,6 +4,11 @@ import java.util.Date;
 
 import lombok.Data;
 
+/**
+ * ユーザマスタのエンティティクラス
+ * 
+ *
+ */
 @Data
 public class MUser {
 	private String userId;
@@ -14,4 +19,5 @@ public class MUser {
 	private Integer gender;
 	private Integer departmentId;
 	private String role;
+	private Department department;
 }
