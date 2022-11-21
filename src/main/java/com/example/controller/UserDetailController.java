@@ -13,6 +13,9 @@ import com.example.domain.user.model.MUser;
 import com.example.domain.user.service.UserService;
 import com.example.form.UserDetailForm;
 
+/**
+ * ユーザー詳細画面のコントローラー
+ */
 @Controller
 @RequestMapping("/user")
 public class UserDetailController {
@@ -27,7 +30,6 @@ public class UserDetailController {
 	 * 説明：
 	 * 		・@PathVariable：これを使用することで、URL内の変数の値を受け取ることだできる
 	 * 		・動的URLを使うためには、「{変数名}」と記述する。今回であれば「{userId:.}
-	 *
 	 **/
 	@GetMapping("/detail/{userId:.+}")
 	public String getUser(UserDetailForm form, Model model, @PathVariable("userId") String userId) {
@@ -36,8 +38,9 @@ public class UserDetailController {
 		MUser user = userService.getUserOne(userId);
 		user.setPassword(null);
 
-		// MUserをformに変換
+		// Userをformに変換
 		form = modelMapper.map(user, UserDetailForm.class);
+		form.setSalaryList(user.getSalaryList());
 
 		// Modelに登録
 		model.addAttribute("userDetailForm", form);

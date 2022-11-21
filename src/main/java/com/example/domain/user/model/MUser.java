@@ -1,13 +1,12 @@
 package com.example.domain.user.model;
 
 import java.util.Date;
+import java.util.List;
 
 import lombok.Data;
 
 /**
  * ユーザマスタのエンティティクラス
- * 
- *
  */
 @Data
 public class MUser {
@@ -20,4 +19,5 @@ public class MUser {
 	private Integer departmentId;
 	private String role;
 	private Department department;
+	private List<Salary> salaryList;
 }
